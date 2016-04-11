@@ -1,0 +1,54 @@
+#contenedor {
+width:90%;
+margin: 0px auto;
+float:left;
+height:600px;
+
+}
+
+.cabecera {
+  float:left;
+background-color:white;
+height: 150px;
+width: 1236px;
+margin-left: 110px;
+color: black;
+font-family: 'Raleway', sans-serif;
+
+}
+
+.c1 {
+margin-top: 35px;
+margin-left: 100px;
+height: 70px;
+width: 200px;
+float: left;
+text-align: center;
+list-style: none;
+border-bottom: 3px solid red;
+
+}
+
+.c1 p {
+margin-top: 25px;
+}
+
+.for {
+height: 20px;
+width: 160px;
+float: left;
+margin-left: 110px;
+margin-top: -10px;
+font-size: 10px;
+
+}
+
+.logo {
+height:200px;
+width: 100px;
+float: left;
+
+}
+#jssor_1 {
+  clear:both;
+}

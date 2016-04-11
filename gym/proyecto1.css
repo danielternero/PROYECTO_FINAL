@@ -1,0 +1,200 @@
+#contenedor {
+width: 100%;
+height: 620px;
+margin: 0px auto;
+
+font-family: 'Raleway', sans-serif;
+
+}
+
+#cabecera {
+width: 95%;
+height:100px;
+float: left;
+margin-left: 2.5%;
+margin-top: 4px;
+
+}
+.cuadro1{
+width: 80%;
+height: 98px;
+float: left;
+}
+.cuadro2{
+width: 20%;
+height: 98px;
+float: left;
+
+}
+
+#botoninicio{
+margin-top:0px;
+margin-left:32px;
+}
+
+#botoncrear{
+margin-left:32px;
+margin-top: -10px;
+}
+
+.logo{
+
+margin-left: 20px;
+float: left;
+}
+
+.lista1{
+text-align: center;
+list-style: none;
+border-bottom: 3px solid red;
+width: 200px;
+float: left;
+margin-left: 180px;
+margin-top: 35px;
+}
+
+#planboton{
+cursor: pointer;
+}
+
+.planes{
+clear: both;
+float: left;
+width: 100%;
+height: 150px;
+font-size: 15px;
+background-color:#ECEFF1;
+
+}
+
+.planes ul li {
+  float: left;
+  list-style: none;
+  display: inline;
+  padding-top: 3px;
+  margin-left: 60px;
+  height: 200px;
+  width: 225px;
+
+}
+
+.planes ul li p {
+margin: 0px;
+text-align: center;
+padding-top:3px;
+width: 100%;
+
+}
+.subrayado {
+border-bottom: 3px solid red;
+font-size: 16px;
+}
+ .instalaciones{
+   clear: both;
+   float: left;
+   width: 100%;
+   height: 150px;
+     background-color:#ECEFF1;
+ }
+
+ .instalaciones ul li {
+   float: left;
+   list-style: none;
+   display: inline;
+   padding-top: 3px;
+   margin-left: 15px;
+   height: 200px;
+   width: 225px;
+
+ }
+
+ #planboton2{
+ cursor: pointer;
+ }
+#dialog {
+height: inherit;
+    width: inherit;
+}
+.ui-dialog-titlebar-close {
+    position: absolute;
+    bottom: 0;
+}
+
+#carrusel {
+clear: both;
+width: 95%;
+height: 520px;
+margin-left: 2.5%;
+margin-top: 8px;
+float: left;
+background-color: #ECEFF1;
+
+
+
+}
+/* -------------------------------------CARRUSEL-------------------------------- */
+/* jssor slider bullet navigator skin 01 css */
+        /*
+        .jssorb01 div           (normal)
+        .jssorb01 div:hover     (normal mouseover)
+        .jssorb01 .av           (active)
+        .jssorb01 .av:hover     (active mouseover)
+        .jssorb01 .dn           (mousedown)
+        */
+        .jssorb01 {
+            position: absolute;
+        }
+        .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 12px;
+            height: 12px;
+            filter: alpha(opacity=70);
+            opacity: .7;
+            overflow: hidden;
+            cursor: pointer;
+            border: #000 1px solid;
+        }
+        .jssorb01 div { background-color: gray; }
+        .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+        .jssorb01 .av { background-color: #fff; }
+        .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+
+        /* jssor slider arrow navigator skin 02 css */
+        /*
+        .jssora02l                  (normal)
+        .jssora02r                  (normal)
+        .jssora02l:hover            (normal mouseover)
+        .jssora02r:hover            (normal mouseover)
+        .jssora02l.jssora02ldn      (mousedown)
+        .jssora02r.jssora02rdn      (mousedown)
+        */
+        .jssora02l, .jssora02r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            background: url('img/a02.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora02l { background-position: -3px -33px; }
+        .jssora02r { background-position: -263px -33px;}     
+        .jssora02l:hover { background-position: -123px -33px; }
+        .jssora02r:hover { background-position: -183px -33px; }
+        .jssora02l.jssora02ldn { background-position: -3px -33px; }
+        .jssora02r.jssora02rdn { background-position: -63px -33px; }
+#carrusel_automatico {
+float: left;
+    height: 350px;
+    bottom: 0;
+    width: 100%;
+    background-color: #E0E0E0;
+    position: absolute;
+    bottom: 0;
+    width: 94%;
+
+}
+
+/* -------------------------------------FIN CARRUSEL-------------------------------- */

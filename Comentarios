@@ -1,0 +1,3 @@
+Editar contraseña:
+
+set password for usuario@'localhost' = password('contraseña')
