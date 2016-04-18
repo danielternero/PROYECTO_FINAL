@@ -1,6 +1,11 @@
 <?php
   include_once("./configuraciondb.php");
   session_start();
+if(!isset($_SESSION["tema"])){
+    $_SESSION["tema"]=array("planes","instalaciones","carrusel");
+  }
+?>
+<?php
 if(isset($_POST["user"])){
     
           $connection = new mysqli($db_host, $db_user, $db_password, $db_name);
@@ -88,7 +93,7 @@ $connection3 = new mysqli($db_host, $db_user, $db_password, $db_name);
     <link href='https://fonts.googleapis.com/css?family=Raleway:500,600' rel='stylesheet' type='text/css'>
     <script>
     $(document).ready(function(){
-      $(".planes").hide();
+
     $("#planboton").click(function(){
           $(".planes").fadeToggle(500);
           $(".instalaciones").hide();
@@ -158,6 +163,18 @@ $connection3 = new mysqli($db_host, $db_user, $db_password, $db_name);
             $(window).bind("orientationchange", ScaleSlider);
             /* ---------------------AQUI ACABA EL SCRIPT DEL CARRUSEL ---------------** */
 });
+ $(document).ready(function(){
+      
+    $("#planboton").click(function(){
+          $(".planes2").fadeToggle(500);
+          $(".instalaciones2").hide();
+    });
+    $(".instalaciones2").hide();
+  $("#planboton2").click(function(){
+        $(".instalaciones2").fadeToggle(500);
+        $(".planes2").hide();
+  });
+	});
 </script>
   </head>
 <body><div id="contenedor">
@@ -165,8 +182,12 @@ $connection3 = new mysqli($db_host, $db_user, $db_password, $db_name);
         <div class="cuadro1">
         <img class="logo" src="Captura.png"/>
             <ul>
+ 					
             <li class="lista1" id="planboton">PLAN</li>
             <li class="lista1" id="planboton2">HORARIO DE APERTURA</li>
+					<li class="lista">TEMAS</li></br>
+					<li class="lista"><a href="tema.php?tema=clasico">Clasico</a></li>
+ 					<li class="lista"><a href="tema.php?tema=privameral">Privameral</a></li>
             </ul>
         </div>
         <div class="cuadro2">
@@ -174,8 +195,8 @@ $connection3 = new mysqli($db_host, $db_user, $db_password, $db_name);
         <a href="crear_usuario.php"><img id="botoncrear" src="crear-usuario.png"/></a>
         </div>
     </div>
-    <div id="carrusel">
-      <div class="planes">
+    <div id="<?php echo $_SESSION['tema'][2]; ?>">
+      <div class="<?php echo $_SESSION['tema'][0]; ?>">
         <ul>
           <li><p><span class="subrayado">AUMENTO MASA MUSCULAR</span></p></br>Entrenamiento cuyo objetivo es ganar masa muscular entrenando
           con una alta carga, para lograr que los musculos aumenten.</li>
@@ -187,7 +208,7 @@ $connection3 = new mysqli($db_host, $db_user, $db_password, $db_name);
            </li>
         </ul>
       </div>
-      <div class="instalaciones">
+      <div class="<?php echo $_SESSION['tema'][1]; ?>">
       <ul>
         <li><?php echo "<span class='subrayado'>".$ins[4]."</span></br></br>HORA APERTURA: ".$ins2[4]."</br>HORA CIERRE: ".$ins3[4];?></li>
         <li><?php echo "<span class='subrayado'>".$ins[1]."</span></br></br>HORA APERTURA: ".$ins2[1]."</br>HORA CIERRE: ".$ins3[1];?></li>
@@ -197,7 +218,7 @@ $connection3 = new mysqli($db_host, $db_user, $db_password, $db_name);
       <ul>
     </div>
 <!-- -------------------------AQUI EMPIEZA EL CARRUSEL ----------------------------- -->
-<div id="carrusel_automatico">
+<div id="<?php echo $_SESSION['tema'][3]; ?>">
     <div id="jssor_1" style="float: left; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden; margin-left:330px;">
     <!-- Loading Screen -->
       <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">

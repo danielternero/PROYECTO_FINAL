@@ -63,7 +63,15 @@ height: 455px;
 float: left;
 margin-left: 2.5%;
 background-color:#E0E0E0;
+}
 
+#cuerpo2 {
+clear: both;
+width: 95%;
+height: 455px;
+float: left;
+margin-left: 2.5%;
+background-color:#FBFCA4;
 }
 
 
