@@ -61,7 +61,7 @@ header('Location: adminplan.php');
 		   	<a href="adminplan.php"><img  class="botonsalir" src="salir.png"/></a>
 	  	</div>
   </div>
-  <div id="cuerpo">
+  <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" enctype="multipart/form-data">
     <fieldset class="formulario">
         <legend><span class="subrayado">PLAN </span></legend></br>
@@ -80,7 +80,7 @@ header('Location: adminplan.php');
 <input type="submit" value="Cambiar" />
     </fieldset>
 </form>
-<div id='contenidoplan2'>
+<div id="<?php echo $_SESSION['tema'][7]; ?>">
 	<p></br></br>EN ESTA SESSION EL ADMINISTRADOR PUEDE EDITAR EL PLAN.</br>
 LAS FECHAS DE COMIENZO Y FIN DEL PLAN, 
 EL PESO INICIO , EL PESO FINAL (OBJETIVO)

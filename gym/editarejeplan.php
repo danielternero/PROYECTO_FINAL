@@ -72,7 +72,7 @@ header('Location: adminplan.php');
 		   	<a href="eliminarejeplan.php?<?php echo "id=".$_GET['idplan']; ?>"><img  class="botonsalir" src="salir.png"/></a>
 	  	</div>
   </div>
-  <div id="cuerpo">
+  <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" action="editarejeplan.php">
     <fieldset class="formulario">
         <legend><span class="subrayado">EJERCICIO </span></legend></br>
@@ -89,7 +89,7 @@ header('Location: adminplan.php');
 <input type="submit" value="Cambiar" />
     </fieldset>
 </form>
-<div id='contenidoplan2'>
+<div id="<?php echo $_SESSION['tema'][7]; ?>">
 	<p></br></br>EN ESTA SESSION EL ADMINISTRADOR PUEDE EDITAR LOS EJERCICIOS QUE TIENE ASIGNADOS DICHO PLAN.</br></br>
 EDITA EL NUMERO DE REPETICIONES,TIEMPO ESTIMADO POR EJERCICIO, 
 NUMERO DE SERIES Y EL DIA DE LA SEMANA

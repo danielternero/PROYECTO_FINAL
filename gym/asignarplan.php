@@ -73,7 +73,7 @@ header('Location: adminplan.php');
 		   	<a href="adminplan.php"><img  class="botonsalir" src="salir.png"/></a>
 	  	</div>
   </div>
-  <div id="cuerpo">
+  <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post">
     
     <fieldset class="formulario">

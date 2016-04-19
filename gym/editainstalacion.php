@@ -61,7 +61,7 @@ header('Location: admininstalacion.php');
 		   	<a href="admininstalacion.php"><img  class="botonsalir" src="salir.png"/></a>
 	  	</div>
   </div>
-  <div id="cuerpo">
+  <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" enctype="multipart/form-data">
     <fieldset class="formulario">
         <legend><span class="subrayado">EDITAR INSTALACIONES </span></legend></br>
@@ -80,7 +80,7 @@ header('Location: admininstalacion.php');
 <input type="submit" value="Cambiar" />
     </fieldset>
 </form>
-<div id='contenidoplan2'>
+<div id="<?php echo $_SESSION['tema'][7]; ?>">
 	<p></br></br>EN ESTA SESSION EL ADMINISTRADOR EDITA LAS DIFERENTES INSTALACIONES QUE EXISTEN EN LA BASE DE DATOS.</br>
 	EDITA EL NOMBRE DE LA SALA, LA PLANTA,LA HORA DE APERTURA Y CIERRE, Y PUEDES AÑADIR UNA IMAGEN DE LA INSTALACION MEDIANTE UN ENLACE.
 </p>

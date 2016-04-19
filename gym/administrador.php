@@ -36,12 +36,12 @@ if ($_SESSION["nivel"]==1) {
         <a href="cerrar.php"><img  class="botoncerrar" src="boton-cerrar-sesion.png"/></a>
     </div>
   </div>
-  <div id="cuerpo">
+  <div id="<?php echo $_SESSION['tema'][4]; ?>">
 	  
-<div class="arriba"><p>USUARIOS</p><a href='adminusuario.php'><img class='logoadmin2'src='../img/usu.jpg'></a></div> 
-<div class="debajo"><p>PLANES</p><a href='adminplan.php'><img class='logoadmin2'src='../img/editarplan.ico'></a></div>		
-<div class="arriba"><p>EJERCICIOS</p><a href='adminejercicio.php'><img class='logoadmin2' src='../img/ejercicio.png'></a></div>
-<div class="debajo"><p>INSTALACION</p><a href='admininstalacion.php'><img class='logoadmin2' src='../img/instalacion.png'></a></div>
+<div class="<?php echo $_SESSION['tema'][8]; ?>"><p>USUARIOS</p><a href='adminusuario.php'><img class='logoadmin2'src='../img/usu.jpg'></a></div> 
+<div class="<?php echo $_SESSION['tema'][9]; ?>"><p>PLANES</p><a href='adminplan.php'><img class='logoadmin2'src='../img/editarplan.ico'></a></div>		
+<div class="<?php echo $_SESSION['tema'][8]; ?>"><p>EJERCICIOS</p><a href='adminejercicio.php'><img class='logoadmin2' src='../img/ejercicio.png'></a></div>
+<div class="<?php echo $_SESSION['tema'][9]; ?>"><p>INSTALACION</p><a href='admininstalacion.php'><img class='logoadmin2' src='../img/instalacion.png'></a></div>
 
 		 
     </div>

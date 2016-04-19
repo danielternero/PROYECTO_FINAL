@@ -53,7 +53,7 @@ if ($_SESSION["nivel"]==1) {
         <a href="administrador.php"><img  class="botoncerrar" src="salir.png"/></a>
     </div>
   </div>
-  <div id="cuerpo">
+  <div id="<?php echo $_SESSION['tema'][4]; ?>">
 	  <div class="espacio">
         <table>  
         <tr>

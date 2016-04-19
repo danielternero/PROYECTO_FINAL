@@ -61,7 +61,7 @@ header('Location: adminejercicio.php');
 		   	<a href="adminejercicio.php"><img  class="botonsalir" src="salir.png"/></a>
 	  	</div>
   </div>
-  <div id="cuerpo">
+  <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" enctype="multipart/form-data">
     <fieldset class="formulario">
         <legend><span class="subrayado">EJERCICIO </span></legend></br>
@@ -92,7 +92,7 @@ header('Location: adminejercicio.php');
 <input type="submit" value="Cambiar" />
     </fieldset>
 </form>
-<div id='contenidoplan2'>
+<div id="<?php echo $_SESSION['tema'][7]; ?>">
 	<p></br></br>EN ESTA SESSION EL ADMINISTRADOR EDITA LOS EJERCICIOS QUE EXISTEN EN LA BASE DE DATOS.</br>
 	EDITA EL NOMBRE DEL EJERCICIO, LA CLASIFICACION ("Peso libre, maquinas, actividades dirigidas...), SI 
 	REQUIERE MAQUINA Y PUEDES CAMBIAR EL VIDEO MEDIANTE UN ENLACE DE VIDEO.

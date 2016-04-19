@@ -79,9 +79,9 @@ echo strtoupper($_SESSION['user']);
         <a href="cerrar.php"><img  class="botoncerrar" src="boton-cerrar-sesion.png"/></a>
     </div>
   </div>
-  <div id="cuerpo"> 
+  <div id="<?php echo $_SESSION['tema'][4]; ?>">
     <div id="contenidofoto"><img id="fotousuario" src="data:image/jpg;base64,<?php echo base64_encode($datos['fotousuario']);?>" ></div> 
-      <div id="contenidodatos">
+      <div id="<?php echo $_SESSION['tema'][5]; ?>">
           <p><span class="subrayado">DATOS PERSONALES:</span></p>
           <p>NOMBRE Y APELLIDOS: <?php echo $datos['nombre']." ".$datos['apellidos'];?></p>
           <p>DNI: <?php echo $datos['dni']?></p><p>EDAD <?php echo $datos['edad']?></p>
@@ -92,7 +92,7 @@ echo strtoupper($_SESSION['user']);
       <?php 
 /*-------------SI TIENE PLAN MUESTRA LA PRIERA CONSULTA, SINO MUESTRA QUE NO TIENE PLAN.....*/
     if (!isset($result2)){   
-        echo "<div  id='contenidoplan'>";
+        echo "<div id=".$_SESSION['tema'][6].">";
            echo "<p><span class='subrayado'>ENTRENAMIENTO:</span></p>";
             echo "<p>PLAN ACTUAL:".$datos['planactual']."</p>";
             echo "<p>FECHA INICIO:".$datos['fechainicio']."</p>";
@@ -102,7 +102,7 @@ echo strtoupper($_SESSION['user']);
     echo "</div>";
     }
     else{
-     echo "<div  id='contenidoplan'>";
+     echo "<div id=".$_SESSION['tema'][6].">";
     echo "<p>El entrenador aun no te ha asignado ningun plan</p>";
     echo "</div>";
     }    

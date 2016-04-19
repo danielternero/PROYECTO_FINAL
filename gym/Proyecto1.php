@@ -2,7 +2,7 @@
   include_once("./configuraciondb.php");
   session_start();
 if(!isset($_SESSION["tema"])){
-    $_SESSION["tema"]=array("planes","instalaciones","carrusel");
+    $_SESSION["tema"]=array("planes","instalaciones","carrusel","carrusel_automatico","cuerpo","contenidodatos","contenidoplan","contenidoplan2","arriba","debajo");
   }
 ?>
 <?php

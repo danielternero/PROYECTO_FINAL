@@ -62,7 +62,7 @@ if ($_SESSION["nivel"]==1) {
 		   	<a href="admininstalacion.php"><img  class="botonsalir" src="salir.png"/></a>
 	  	</div>
   </div>
-  <div id="cuerpo">
+  <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" enctype="multipart/form-data">
     <fieldset class="formulario">
         <legend><span class="subrayado">INSTALACION</span></legend></br>
@@ -80,7 +80,7 @@ if ($_SESSION["nivel"]==1) {
     </fieldset>
     
 </form>
-<div id='contenidoplan2'>
+<div id="<?php echo $_SESSION['tema'][7]; ?>">
 	<p></br></br>EN ESTA SESSION EL ADMINISTRADOR AÑADE INSTALACIONES A LA BASE DE DATOS.</br>
 	AÑADE EL NOMBRE DE LA SALA, LA PLANTA DONDE ESTA SITUADA LA SALA, LA HORA DE APERTURA Y CIERRE DE DICHA SALA 
 	Y PUEDES INTRODUCIR UNA IMAGEN DE LA SALA MEDIANTE UN ENLACE.

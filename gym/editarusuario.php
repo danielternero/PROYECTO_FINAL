@@ -63,7 +63,7 @@ header('Location: adminusuario.php');
 		   	<a href="adminusuario.php"><img  class="botonsalir" src="salir.png"/></a>
 	  	</div>
   </div>
-  <div id="cuerpo">
+  <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" enctype="multipart/form-data">
     <fieldset class="formulario">
         <legend><span class="subrayado">EDITAR USUARIO </span></legend></br>

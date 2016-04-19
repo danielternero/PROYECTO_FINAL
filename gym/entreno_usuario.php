@@ -65,7 +65,7 @@ if ($result = $connection->query("SELECT * FROM plan join usuario on plan.FKDNI=
 
 
 
-<div id="cuerpo">
+<div id="<?php echo $_SESSION['tema'][4]; ?>">
    <div class="espacio">
 <table> 
         <tr>

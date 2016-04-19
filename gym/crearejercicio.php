@@ -61,7 +61,7 @@ if ($_SESSION["nivel"]==1) {
 		   	<a href="adminejercicio.php"><img  class="botonsalir" src="salir.png"/></a>
 	  	</div>
   </div>
-  <div id="cuerpo">
+ <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" enctype="multipart/form-data">
     <fieldset class="formulario">
         <legend><span class="subrayado">EJERCICIOS</span></legend></br>
@@ -94,7 +94,7 @@ if ($_SESSION["nivel"]==1) {
     </fieldset>
     
 </form>
-<div id='contenidoplan2'>
+<div id="<?php echo $_SESSION['tema'][7]; ?>">
 	<p></br>EN ESTA SESSION EL ADMINISTRADOR CREA NUEVOS EJERCICIOS QUE SE AÑADEN A LA BASE DE DATOS.</br>
 	AÑADE EL NOMBRE DEL EJERICICO,  LA CLASIFICACION ("Peso libre, maquinas, actividades dirigidas...), SI 
 	REQUIERE MAQUINA , LA INSTALACION DONDE SE EJECUTA EL EJERCICIO Y PUEDES AÑADIR UN VIDEO MEDIANTE UN ENLACE DE VIDEO.

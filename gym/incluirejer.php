@@ -63,7 +63,7 @@ header('Location: adminplan.php');
 		   	<a href="adminplan.php"><img  class="botonsalir" src="salir.png"/></a>
 	  	</div>
   </div>
-  <div id="cuerpo">
+  <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post">
     
     <fieldset class="formulario">
@@ -90,7 +90,7 @@ header('Location: adminplan.php');
     </fieldset>
     
 </form>
-<div id='contenidoplan2'>
+<div id="<?php echo $_SESSION['tema'][7]; ?>">
 	<p></br></br>EN ESTA SESSION EL ADMINISTRADOR AÑADE EJERCICIOS AL PLAN QUE YA TIENE ASIGNADO.</br>
 	PUEDE INCLUIR EJERCICIOS, LAS REPETICIONES, EL TIEMPO ESTIMADO, LAS SERIES Y EL DIA DE LA SEMANA
 </p>
