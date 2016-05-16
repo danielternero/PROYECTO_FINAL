@@ -46,67 +46,26 @@ $graph->xaxis->SetTickLabels(array('17-25','26-34','35-42','43-50'));
 $graph->yaxis->HideLine(false);
 $graph->yaxis->HideTicks(false,false);
 
-// Create the bar plots
+
 $b1plot = new BarPlot($datos);
 
-// Create the grouped bar plot
+
 $gbplot = new GroupBarPlot(array($b1plot));
-// ...and add it to the graPH
+
 $graph->Add($gbplot);
 
 
 $b1plot->SetColor("white");
 $b1plot->SetFillColor("#cc1111");
-
+$graph->title->SetFont(FF_ARIAL,FS_BOLD,16);
 $graph->title->Set("EDAD MEDIA DE USUARIOS");
 $graph->xaxis->title->Set("EDAD DE USUARIOS");
 $graph->yaxis->title->Set("Nº USUARIOS");
 
-// Display the graph
+
 $graph->Stroke();
 			
 			
-			
-			
-/*$graph = new Graph(600,700);    
-$graph->SetScale("textlin");
- 
-$graph->img->SetMargin(40,30,20,40);
-$graph->SetShadow();
- 
-// Create the error plot
-$errplot=new ErrorPlot($apertura);
-$errplot->SetColor("red");
-$errplot->SetWeight(2);
-$errplot->SetCenter();
- 
-// Add the plot to the graph
-$graph->Add($errplot);
- 
-$graph->title->Set("Horarios");
-$graph->xaxis->title->Set("Instalaciones");
-$graph->yaxis->title->Set("Hora");
- 
-$graph->xaxis->SetTickLabels($sala);
- 
-// Display the graph
-$graph->Stroke();
-       		
-                $graph = new Graph(600,700,'auto');
-                $graph->SetScale('textlin');
-                $graph->Set90AndMargin(60,30,80,30);
-                $graph->xaxis->SetLabelAlign('right','center','right');
-                $graph->yaxis->SetLabelAlign('center','bottom');
-                $graph->xaxis->SetTickLabels($sala);
-                $graph->title->Set('');
-               
-                $bplot = new BarPlot($datos);
-                $bplot->SetFillColor('orange');
-                $bplot->SetWidth(0.8);
-                $bplot->SetYMin(1);
-                $graph->Add($bplot);
-  $bplot->value->Show();
-                $graph->Stroke();*/
 			
  }
   ?>

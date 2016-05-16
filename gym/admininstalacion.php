@@ -77,14 +77,7 @@ if ($_SESSION["nivel"]==1) {
       </table>  
 		  </div>
     </div>
-  <div id="pie">
-	  	 <table>  
-			<tr>
-		<?php	
-			 echo "<td>CREAR INSTALACION<a href='crearinstalacion.php'><img class='logoadmin'src='../img/anadirejercicio.png'</a></td>";
-		?>
-		</tr>
-		</table> 
+ 
 </div>
 </body>
 </html>

@@ -74,10 +74,10 @@ if ($result = $connection->query("SELECT * FROM plan join usuario on plan.FKDNI=
         <td>INSTALACION</td>
         <td>PLANTA</td>
         <td>REQUIERE MAQUINA</td>
+		<td>CLASIFICACION</td>
         <td>SERIES</td>
         <td>REPETICIONES</td>
         <td>TIEMPO</td>
-        <td>Nº MAQUINA</td>
         <td>VIDEOS</td>
         </tr>
         <?php
@@ -88,10 +88,10 @@ if ($result = $connection->query("SELECT * FROM plan join usuario on plan.FKDNI=
         echo "<td>".$sala[$y]."</td>";
         echo "<td>".$planta[$y]."</td>";
         echo "<td>".$maquina[$y]."</td>";
+		echo "<td>".$clasificacion[$y]."</td>";
         echo "<td>".$series[$y]."</td>";
         echo "<td>".$repeticiones[$y]."</td>";
         echo "<td>".$tiempo[$y]."</td>";
-        echo "<td>".$clasificacion[$y]."</td>";
         echo "<td><a href='entreno_usuario.php?id=".$y."'><img src='../img/video.jpg' class='logovideo'></a></td>";
         echo "</tr>";
         }
@@ -113,9 +113,16 @@ if ($result = $connection->query("SELECT * FROM plan join usuario on plan.FKDNI=
         ?>
     </div>
 </div>
-
+ <div id="pie">
+	  	 <table>  
+			<tr>
+		<?php	
+			 echo "<td><strong>DESCARGAR PLAN</strong><a href='pdfindividual.php'><img class='logoplan'src='../img/entrenamiento.jpg'</a></td>";
+		?>
+		</tr>
+		</table> 
       
-      
+	  </div>      
       
       
       

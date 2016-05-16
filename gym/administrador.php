@@ -43,10 +43,19 @@ if ($_SESSION["nivel"]==1) {
 <div class="<?php echo $_SESSION['tema'][8]; ?>"><p>EJERCICIOS</p><a href='adminejercicio.php'><img class='logoadmin2' src='../img/ejercicio.png'></a></div>
 <div class="<?php echo $_SESSION['tema'][9]; ?>"><p>INSTALACION</p><a href='admininstalacion.php'><img class='logoadmin2' src='../img/instalacion.png'></a></div>
 
-		 
-    </div>
+<div class="grafica">
+	<img class="graficaimg" src="./dashboard.php">
+</div>
+	  
+	</div>
   <div id="pie">
-
+ <table>  
+			<tr>
+		<?php	
+			 echo "<td><strong>DESCARGAR PLAN</strong><a href='pdfcolectivo.php'><img class='logoplan'src='../img/entrenamiento.jpg'</a></td>";
+		?>
+		</tr>
+		</table> 
 </div>
 </body>
 </html>

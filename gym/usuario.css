@@ -78,21 +78,21 @@ background-color:#FBFCA4;
 /*------------------FOTO USUARIO---------------------------*/
 #contenidofoto {
 float: left;
-width: 25%;
-height: 340px;
+width: 20%;
+height: 250px;
 }
 
 #fotousuario {
 margin-top: 20px;
 margin-left: 30px;
-width: 240px;
-height: 320px;
+width: 200px;
+height: 250px;
 border-radius: 20px;
 }
 /*------------------------FIN FOTO USUARIO----------*/
 #contenidodatos{
 float: left;
-width: 35%;
+width: 45%;
 height: 440px;
 background-color: #ECEFF1;
 margin-top: 8px;
@@ -107,7 +107,7 @@ margin-left: 25px;
 
 #contenidodatos2{
 float: left;
-width: 35%;
+width: 45%;
 height: 440px;
 background-color: #FDFEBA;
 margin-top: 8px;
@@ -122,7 +122,7 @@ margin-left: 25px;
 
 #contenidoplan{
 float: left;
-width: 35%;
+width: 30%;
 height: 440px;
 background-color: #ECEFF1;
 margin-top: 10px;
@@ -138,7 +138,7 @@ margin-left: 25px;
 
 #contenidoplan3{
 float: left;
-width: 35%;
+width: 30%;
 height: 440px;
 background-color: #FDFEBA;
 margin-top: 10px;
@@ -246,7 +246,7 @@ margin-left: 30px;
 .arriba{
 padding-left: 40px;
 margin-top:40px;
-margin-left: 250px;
+margin-left: 40px;
 height: 170px;
 width: 12%;
 float: left;
@@ -258,7 +258,7 @@ border-radius: 50px;
 .arriba2{
 padding-left: 40px;
 margin-top:40px;
-margin-left: 250px;
+margin-left: 40px;
 height: 170px;
 width: 12%;
 float: left;
@@ -270,7 +270,7 @@ border-radius: 50px;
 .debajo{
 padding-left: 40px;
 margin-top:40px;
-margin-left: 230px;
+margin-left: 40px;
 height: 170px;
 width: 12%;
 float: left;
@@ -281,13 +281,20 @@ background-color: #ECEFF1;
 .debajo2{
 padding-left: 40px;
 margin-top:40px;
-margin-left: 230px;
+margin-left: 40px;
 height: 170px;
 width: 12%;
 float: left;
 font-weight: bold;
 border-radius: 50px;
 background-color: #FDFEBA;
+}
+
+.grafica{
+width: 61%;
+height: 450px;
+margin-left: 38%;
+
 }
 .logoadmin2{
 height: 100px;
@@ -317,4 +324,41 @@ border-radius: 35px;
 margin-left: 40px;
 padding: 20px;
 font-weight: bold;
+}
+
+/*------------aplicacion------------------*/
+#aplicacion{
+height: 250px;
+width: 250px;
+margin-left: 10%;
+margin-top: 5%;
+font-weight: bold;
+}
+
+fieldset {
+	border:1px solid #999;
+	border-radius: 19px;
+	box-shadow:0 0 10px #999;
+}
+legend {
+	background:#fff;
+}
+
+.apli {
+  background-image:url(http://daytonavenue.com/wordpress/wp-content/themes/daytonave/library/img/clubhouse/clubhouse3.jpg);
+}
+/*------------Logo PDF------------------*/
+.logoplan{
+height: 80px;
+width: 80px;
+border-radius: 20px;
+}
+
+/*------------imagen grafica------------------*/
+
+.graficaimg{
+width: 715px;
+height: 440px;
+margin-left: 30px;
+margin-top: 6.5px;
 }
