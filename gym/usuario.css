@@ -92,7 +92,7 @@ border-radius: 20px;
 /*------------------------FIN FOTO USUARIO----------*/
 #contenidodatos{
 float: left;
-width: 45%;
+width: 37%;
 height: 440px;
 background-color: #ECEFF1;
 margin-top: 8px;
@@ -107,7 +107,7 @@ margin-left: 25px;
 
 #contenidodatos2{
 float: left;
-width: 45%;
+width: 37%;
 height: 440px;
 background-color: #FDFEBA;
 margin-top: 8px;
@@ -122,12 +122,13 @@ margin-left: 25px;
 
 #contenidoplan{
 float: left;
-width: 30%;
-height: 440px;
+width: 97%;
+height: 3px;
 background-color: #ECEFF1;
-margin-top: 10px;
+margin-top: 26px;
 border-radius: 35px;
-margin-left: 25px
+margin-left: 9px;
+font-size: 21px;
 }
 
 #contenidoplan p{
@@ -138,12 +139,13 @@ margin-left: 25px;
 
 #contenidoplan3{
 float: left;
-width: 30%;
-height: 440px;
+width: 97%;
+height: 3px;
 background-color: #FDFEBA;
-margin-top: 10px;
+margin-top: 26px;
 border-radius: 35px;
-margin-left: 25px
+margin-left: 9px;
+font-size: 21px;
 }
 
 #contenidoplan3 p{
@@ -169,7 +171,6 @@ margin-left: 2.5%;
 #logoentreno{
 width: 80px;
 height: 80px;
-margin-left:230px;
 margin-top: -50px;
 }
 
@@ -219,7 +220,7 @@ margin-top: -275px;
 .formulario{
 float: left;
 width: 47%;
-margin-top: 30px;
+margin-top: -16px;
 }
 .subrayado {
 border-bottom: 3px solid red;
@@ -294,8 +295,21 @@ background-color: #FDFEBA;
 width: 61%;
 height: 450px;
 margin-left: 38%;
-
 }
+
+.grafica2{
+width: 42%;
+height: 454px;
+margin-left: 6px;
+float: left;
+}
+
+.grafica2 img{
+width: 99%;
+height: 452px;
+margin-left: 6px;
+}
+
 .logoadmin2{
 height: 100px;
 width: 100px;
@@ -361,4 +375,14 @@ width: 715px;
 height: 440px;
 margin-left: 30px;
 margin-top: 6.5px;
+}
+
+.graficaimg2{
+width: 510px;
+height: 454px;
+
+}
+
+ul.eje{
+list-style: none;
 }

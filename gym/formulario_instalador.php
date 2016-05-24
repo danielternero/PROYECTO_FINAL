@@ -28,7 +28,8 @@ session_start();
   </div>
   <div class="apli "id="<?php echo $_SESSION['tema'][4]; ?>">
 	  <div id="aplicacion">
-<form method="post" enctype="multipart/form-data">
+		  
+<form method="post" enctype="multipart/form-data" action="formulario_instalador.php">
    <fieldset class="formulario">
     <legend ><span class="subrayado"></span></legend></br>
     Usuario:
@@ -36,9 +37,17 @@ session_start();
     
     Contraseña:
     <input type="password" name="CONTRASENA" required /></br></br>
+	
+	Servidor:
+	<input type="text" name="HOST" required/></br></br>
     
 	Nombre de BSD:
     <input type="text" name="BSD" required/></br></br>
+	Base de datos:
+ 	<select name="TIPOBSD" required>
+              <option  value="entera">Base de datos completa</option>
+              <option  value="mitad">Base de datos sin contenido</option>
+            </select></br></br>
 
 <input type="submit" value="Enviar" />
     </fieldset>
@@ -49,26 +58,33 @@ session_start();
   <div id="pie">
 
 </div>
+
 <?php
-	if(isset($_POST["USUARIO"])){
-		$user=$_POST["USUARIO"];
-		$pass=$_POST["CONTRASENA"];
-		$bbdd=$_POST["BSD"];
-		//var_dump($user);
-		$connection = new mysqli($db_host, $db_user, $db_password, $db_name););
+if(isset($_POST["USUARIO"])){
+		$usuario=$_POST["USUARIO"];
+		$contrasena=$_POST["CONTRASENA"];
+		$bsd=$_POST["BSD"];
+		$localhost=$_POST["HOST"];
+		$tipobsd=$_POST["TIPOBSD"];
+		$connection = new mysqli($localhost, $usuario, $contrasena, $bsd);
 		if ($connection->connect_errno) {
             printf("Connection failed: %s\n", $connection->connect_error);
             exit();
-          }else{
-    
-          	include './bbdd.php';
-          	$file = fopen("../conexionbbdd/bbdd.php","a");
+		}else{ if($basedatos == 'TIPOBSD'){
+                  include("entera.php");
+                }else{
+                  include("mitad.php");
+                }
+      			$file = fopen("./variable.php","a");
           	fwrite($file, "<?php"."\n");
-          	fwrite($file, "$"."USUARIO="."'".$db_host."';"."\n");
-          	fwrite($file, "$"."CONTRASENA="."'".$db_password."';"."\n");
-          	fwrite($file, "$"."SERVIDOR="."'".$server."';"."\n");
-          	fwrite($file, "$"."BSD="."'".$db_name."';"."\n");
+          	fwrite($file, "$"."USUARIO="."'".$usuario."';"."\n");
+          	fwrite($file, "$"."CONTRASENA="."'".$contrasena."';"."\n");
+          	fwrite($file, "$"."SERVIDOR="."'".$localhost."';"."\n");
+          	fwrite($file, "$"."BSD="."'".$bsd."';"."\n");
           	fwrite($file, "?>"."\n");
           	fclose($file);
+		}
+}
+?>
 </body>
 </html>

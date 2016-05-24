@@ -11,29 +11,29 @@ $pdf = new FPDF('Landscape','mm','A4');
 $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('helvetica', '', 10);
-$pdf->Image('../img/logo.png' , 165 ,10, 35 , 35,'PNG');
-$pdf->Cell(150, 10, "NOMBRE:".$_SESSION['user'],1);
+$pdf->Image('../img/logo.png' , 235 ,10, 28 , 28,'PNG');
+$pdf->Cell(200, 10, "NOMBRE DE USUARIO: ".$_SESSION['user'],1);
 
-$pdf->Ln(10);
+$pdf->Ln(5);
 $pdf->Cell(170, 20, 'Fecha: '.date('d-m-Y').'');
 
 $pdf->SetFont('helvetica', '', 9);
-$pdf->Ln(26);
+$pdf->Ln(5);
 $pdf->SetFont('HELVETICA', 'B', 11);
 $pdf->Cell(70, 8, '', 0);
 $pdf->Cell(100, 10,'' , 0);
 $pdf->Ln(23);
 
 $pdf->SetFont('Arial', 'B', 8);
-$pdf->Cell(17, 8, 'DIA',1);
-$pdf->Cell(28, 8, 'NOMBRE EJER',1);
-$pdf->Cell(25, 8, 'SALA',1);
-$pdf->Cell(20, 8, 'PLANTA',1);
+$pdf->Cell(25, 8, 'DIA',1);
+$pdf->Cell(57, 8, 'NOMBRE EJER',1);
+$pdf->Cell(35, 8, 'SALA',1);
+$pdf->Cell(30, 8, 'PLANTA',1);
 $pdf->Cell(27, 8, 'REQ_MAQUINA',1);
-$pdf->Cell(19, 8, 'CLASIFICACION',1);
-$pdf->Cell(13, 8, 'SERIES',1);
+$pdf->Cell(35, 8, 'CLASIFICACION',1);
+$pdf->Cell(20, 8, 'SERIES',1);
 $pdf->Cell(24, 8, 'REPETICIONES',1);
-$pdf->Cell(17, 8, 'TIEMPO',1);
+$pdf->Cell(22, 8, 'TIEMPO',1);
 
 
 $pdf->Ln(8);
@@ -48,7 +48,7 @@ if ($result = $connection->query("SELECT * FROM plan join usuario on plan.FKDNI=
                   
                   
                   while($obj = $result->fetch_object()) {
-					  
+					 $tipo=$obj->TIPO;
 					 $dia[$i]=$obj->DIA_SEMANA;
                      $nombre[$i]=$obj->NOMBRE_EJER;
                      $sala[$i]=$obj->SALA;
@@ -60,16 +60,16 @@ if ($result = $connection->query("SELECT * FROM plan join usuario on plan.FKDNI=
                      $tiempo[$i]=$obj->TIEMPO_ESTIMADO;
                      
 	
-	$pdf->Cell(17, 8,$dia[$i],1);
-	$pdf->Cell(28, 8,$nombre[$i],1);
-	$pdf->Cell(25, 8, $sala[$i],1);
-	$pdf->Cell(20, 8,$planta[$i],1);
+	$pdf->Cell(25, 8,$dia[$i],1);
+	$pdf->Cell(57, 8,$nombre[$i],1);
+	$pdf->Cell(35, 8, $sala[$i],1);
+	$pdf->Cell(30, 8,$planta[$i],1);
 	$pdf->Cell(27, 8,$requiere[$i],1);
-	$pdf->Cell(19, 8,$clasificacion[$i],1);
-	$pdf->Cell(13, 8, $series[$i],1);
+	$pdf->Cell(35, 8,$clasificacion[$i],1);
+	$pdf->Cell(20, 8, $series[$i],1);
 	$pdf->Cell(24, 8,$repeticiones[$i], 1);
-	$pdf->Cell(17, 8,$tiempo[$i], 1);
-	$pdf->Ln(10);
+	$pdf->Cell(22, 8,$tiempo[$i], 1);
+	$pdf->Ln(8);
 	$i++;
 					  
 	 }
@@ -79,7 +79,7 @@ if ($result = $connection->query("SELECT * FROM plan join usuario on plan.FKDNI=
             var_dump($result);
           }
 	$pdf->Ln(8);
-
+$pdf->Cell(200, 10, "NOMBRE DE PLAN: ".$tipo);
 $pdf->SetFont('Arial', 'B', 8);
 $pdf->Output();
 

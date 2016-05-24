@@ -49,13 +49,7 @@ if ($_SESSION["nivel"]==1) {
 	  
 	</div>
   <div id="pie">
- <table>  
-			<tr>
-		<?php	
-			 echo "<td><strong>DESCARGAR PLAN</strong><a href='pdfcolectivo.php'><img class='logoplan'src='../img/entrenamiento.jpg'</a></td>";
-		?>
-		</tr>
-		</table> 
+
 </div>
 </body>
 </html>

@@ -47,7 +47,6 @@ if (!isset($_SESSION["user"])) {
             echo "Wrong Query";
             var_dump($result);
           }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,24 +81,31 @@ echo strtoupper($_SESSION['user']);
   <div id="<?php echo $_SESSION['tema'][4]; ?>">
     <div id="contenidofoto"><img id="fotousuario" src="data:image/jpg;base64,<?php echo base64_encode($datos['fotousuario']);?>" ></div> 
       <div id="<?php echo $_SESSION['tema'][5]; ?>">
-          <p><span class="subrayado">DATOS PERSONALES:</span></p>
-          <p>NOMBRE Y APELLIDOS: <?php echo $datos['nombre']." ".$datos['apellidos'];?></p>
-          <p>DNI: <?php echo $datos['dni']?></p><p>EDAD <?php echo $datos['edad']?></p>
-          <p>PESO: <?php echo $datos['pesoini'];?></p>
-          <p>FECHA ALTA: <?php echo $datos['alta'];?></p>
-            <p>CORREO ELECTRONICO : <?php echo $datos['correo'];?></p>
-    </div>
-      <?php 
+		  <p><span class="subrayado">DATOS PERSONALES:</span></p>
+		   <ul class="eje">
+          <li>NOMBRE Y APELLIDOS: <?php echo $datos['nombre']." ".$datos['apellidos'];?></li>
+          <li>DNI: <?php echo $datos['dni']?></li><li>EDAD <?php echo $datos['edad']?></li>
+          <li>PESO: <?php echo $datos['pesoini'];?></li>
+          <li>FECHA ALTA: <?php echo $datos['alta'];?></li>
+          <li>CORREO ELECTRONICO : <?php echo $datos['correo'];?></li>
+		 </ul>
+		 <?php 
 /*-------------SI TIENE PLAN MUESTRA LA PRIERA CONSULTA, SINO MUESTRA QUE NO TIENE PLAN.....*/
     if (!isset($result2)){   
-        echo "<div id=".$_SESSION['tema'][6].">";
-           echo "<p><span class='subrayado'>ENTRENAMIENTO:</span></p>";
-            echo "<p>PLAN ACTUAL:".$datos['planactual']."</p>";
-            echo "<p>FECHA INICIO:".$datos['fechainicio']."</p>";
-            echo "<p>FECHA FIN:".$datos['fechafin']."</p>";
-            echo "<p>PESO (objetivo):".$datos['pesofin']."</p></br>";
-    echo "<p><strong>IR AL ENTRENAMIENTO </strong><a href='entreno_usuario.php'><img id='logoentreno' src='../img/entreno.jpg'></a></p>";
+             echo "<p><span class='subrayado'>ENTRENAMIENTO:</span></p>";
+			 echo "<ul class='eje'>";
+             echo "<li>PLAN ACTUAL:".$datos['planactual']."</li>";
+             echo "<li>FECHA INICIO:".$datos['fechainicio']."</li>";
+             echo "<li>FECHA FIN:".$datos['fechafin']."</li>";
+             echo "<li>PESO (objetivo):".$datos['pesofin']."</li></br>";
+			echo "</br>";
+			 echo "<li><strong>IR AL ENTRENAMIENTO </strong><a href='entreno_usuario.php'><img id='logoentreno' src='../img/entreno.jpg'></a></li>";
+		echo "</ul>";
     echo "</div>";
+		echo "<div class='grafica2'>";
+		echo "<img src='./dashboard2.php'>";
+echo "</div>";
+		
     }
     else{
      echo "<div id=".$_SESSION['tema'][6].">";
@@ -107,6 +113,9 @@ echo strtoupper($_SESSION['user']);
     echo "</div>";
     }    
     ?>
+
+    </div>
+     
             
         </div>
          
@@ -115,9 +124,6 @@ echo strtoupper($_SESSION['user']);
   <div id="pie">
 
 </div>
-
-
-
 
 </body>
 </html>

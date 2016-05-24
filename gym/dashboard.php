@@ -1,4 +1,8 @@
 <?php
+ session_start();
+if (!isset($_SESSION["user"])) {
+          header("location: Proyecto1.php");
+          }
         include("./jpgraph-3.5.0b1/src/jpgraph.php");
         include("./jpgraph-3.5.0b1/src/jpgraph_bar.php");
         include("configuraciondb.php");

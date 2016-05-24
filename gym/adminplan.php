@@ -28,6 +28,7 @@ if ($_SESSION["nivel"]==1) {
 				
 			if($obj->TIPO!=null){ //Quiere decir que tiene plan.(NO DEVUELVE NULL)
 			$tipo[$y]=$obj->TIPO;
+			$pdf[$y]="<a href='pdfcolectivo.php?id=$obj->NOMBRE'><img class='logoadmin' src='../img/entrenamiento.jpg'></a>";
 			$idplan[$y]="<a href='incluirejer.php?id=$obj->ID_PLAN'><img class='logoadmin' src='../img/ejercicio.png'></a>";
 			$planid[$y]=$obj->ID_PLAN;
 			$borrar[$y]="<a href='eliminarplan.php?id=$obj->DNI'><img class='logoadmin'src='../img/eliminarplan.png'</a>";
@@ -38,6 +39,7 @@ if ($_SESSION["nivel"]==1) {
 }				
 			else{ //No tiene plan. (DEVUELVE NULL)
 			$tipo[$y]="No tiene plan";
+			$pdf[$y]="No tiene PDF";
 			$idplan[$y]="<p>No se pueden poner ejercicios si no tiene plan</p>";
 			$borrar[$y]="<p>No se puede borrar un plan inexistente</p>";
 			$editar[$y]="<p>No se puede editar un plan inexixtente</p>";
@@ -82,6 +84,7 @@ if ($_SESSION["nivel"]==1) {
         <tr>
 			<th>USUARIOS</th>
             <th>PLAN</th>
+			<th>PDF</th>
             <th>EDITAR PLAN</th>
 			<th>BORRAR PLAN</th>
 			<th>ADMIN EJER PLAN</th>
@@ -95,6 +98,7 @@ if ($_SESSION["nivel"]==1) {
         echo "<tr>";
         echo "<td>".$usuario[$y]."</td>";
 		echo "<td>".$tipo[$y]."</td>";
+		echo "<td>".$pdf[$y]."</td>";
 		echo "<td>".$editar[$y]."</td>";
 		echo "<td>".$borrar[$y]."</td>";
 		echo "<td>".$adminplan[$y]."</td>";
