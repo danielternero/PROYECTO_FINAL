@@ -1,5 +1,8 @@
 <?php
   include_once("./configuraciondb.php");
+if (!isset($db_name)){
+header('Location:formulario_instalador.php');
+}
   session_start();
 if(!isset($_SESSION["tema"])){
     $_SESSION["tema"]=array("planes","instalaciones","carrusel","carrusel_automatico","cuerpo","contenidodatos","contenidoplan","contenidoplan2","arriba","debajo");
@@ -184,7 +187,7 @@ $connection3 = new mysqli($db_host, $db_user, $db_password, $db_name);
             <ul>
  					
             <li class="lista1" id="planboton">PLAN</li>
-            <li class="lista1" id="planboton2">HORARIO DE APERTURA</li>
+            <li class="lista1" id="planboton2">HORARIOS</li>
 					<li class="lista">TEMAS</li></br>
 					<li class="lista"><a href="tema.php?tema=clasico">Clasico</a></li>
  					<li class="lista"><a href="tema.php?tema=privameral">Privameral</a></li>

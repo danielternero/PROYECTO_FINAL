@@ -1,5 +1,8 @@
 <?php
    include_once("./configuraciondb.php");
+if (!isset($db_name)){
+header('Location:formulario_instalador.php');
+}
 session_start();
 
 if (!isset($_SESSION["user"])) {

@@ -13,7 +13,7 @@ if (!isset($_SESSION["user"])) {
             printf("Connection failed: %s\n", $connection->connect_error);
             exit();
         }else{
-   	$consulta="SELECT COUNT(ID_EJERCICIO) as 'n1', CLASIFICACION FROM ejercicios, conforma, plan, usuario where ejercicios.ID_EJERCICIO=conforma.FKID_EJERCICIO and conforma.FKID_PLAN=plan.ID_PLAN and plan.FKDNI=usuario.DNI and usuario.USUARIO='".$_SESSION['user']."' GROUP by CLASIFICACION;";
+   	$consulta="SELECT COUNT(ID_EJERCICIO) as 'n1', CLASIFICACION FROM ejercicios, conforma, plan, usuario where ejercicios.ID_EJERCICIO=conforma.FKID_EJERCICIO and conforma.FKID_PLAN=plan.ID_PLAN and plan.FKDNI=usuario.DNI and usuario.NOMBRE='".$_SESSION['user']."' GROUP by CLASIFICACION;";
         $result=$connection->query($consulta);
                while($obj=$result->fetch_object()){
 				 $activi[]=$obj->n1;
@@ -60,4 +60,4 @@ $plot->SetFillColor('red');
 // Add the plot and display the graph
 $graph->Add($plot);
 $graph->Stroke();
-  ?>
+ ?>

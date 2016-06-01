@@ -1,5 +1,8 @@
 <?php
 include_once("./configuraciondb.php");
+if (!isset($db_name)){
+header('Location:formulario_instalador.php');
+}
   session_start();
 if (!isset($_SESSION["user"])) {
           header("location: Proyecto1.php");
@@ -24,13 +27,18 @@ if ($result = $connection->query("SELECT * FROM plan join usuario on plan.FKDNI=
                      $series[$i]=$obj->SERIES;
                      $tiempo[$i]=$obj->TIEMPO_ESTIMADO;
                      $repeticiones[$i]=$obj->REPETICIONES;
-                     $i++;
+                     
+					  
+					if($obj->ENLACE!=null){
+					$video[$i]="<a href='entreno_usuario.php?id=".$i."'><img src='../img/video.jpg' class='logovideo'></a>";
+					}
+					else{
+					$video[$i]="NO DISPONIBLE";
+					}
+					$i++;
                  }
               }
-          } else {
-            echo "Wrong Query";
-            var_dump($result);
-          }
+          } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +100,7 @@ if ($result = $connection->query("SELECT * FROM plan join usuario on plan.FKDNI=
         echo "<td>".$series[$y]."</td>";
         echo "<td>".$repeticiones[$y]."</td>";
         echo "<td>".$tiempo[$y]."</td>";
-        echo "<td><a href='entreno_usuario.php?id=".$y."'><img src='../img/video.jpg' class='logovideo'></a></td>";
+		echo "<td>".$video[$y]."</td>";
         echo "</tr>";
         }
         ?>

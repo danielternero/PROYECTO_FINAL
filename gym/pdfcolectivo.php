@@ -5,6 +5,9 @@ if (!isset($_SESSION["user"])) {
           }
 require('./font/fpdf.php');
 require('./configuraciondb.php');
+if (!isset($db_name)){
+header('Location:formulario_instalador.php');
+}
 $connection = new mysqli($db_host, $db_user, $db_password, $db_name);
 
 $pdf = new FPDF('Landscape','mm','A4');
@@ -26,7 +29,7 @@ $pdf->Ln(23);
 
 $pdf->SetFont('Arial', 'B', 8);
 $pdf->Cell(25, 8, 'DIA',1);
-$pdf->Cell(57, 8, 'NOMBRE EJER',1);
+$pdf->Cell(57, 8, 'NOMBRE DE EJERCICIO',1);
 $pdf->Cell(35, 8, 'SALA',1);
 $pdf->Cell(30, 8, 'PLANTA',1);
 $pdf->Cell(27, 8, 'REQ_MAQUINA',1);

@@ -1,5 +1,8 @@
 <?php
 include_once("./configuraciondb.php");
+if (isset($db_name)){
+header('Location:Proyecto1.php');
+}
 session_start();
 ?>
 <!DOCTYPE html>
@@ -30,7 +33,7 @@ session_start();
 	  <div id="aplicacion">
 		  
 <form method="post" enctype="multipart/form-data" action="formulario_instalador.php">
-   <fieldset class="formulario">
+   <fieldset class="formularioinsta">
     <legend ><span class="subrayado"></span></legend></br>
     Usuario:
     <input type="text" name="USUARIO" required/></br></br>
@@ -70,19 +73,32 @@ if(isset($_POST["USUARIO"])){
 		if ($connection->connect_errno) {
             printf("Connection failed: %s\n", $connection->connect_error);
             exit();
-		}else{ if($basedatos == 'TIPOBSD'){
+		}else{ if($tipobsd == 'entera'){
                   include("entera.php");
                 }else{
                   include("mitad.php");
                 }
-      			$file = fopen("./variable.php","a");
-          	fwrite($file, "<?php"."\n");
-          	fwrite($file, "$"."USUARIO="."'".$usuario."';"."\n");
-          	fwrite($file, "$"."CONTRASENA="."'".$contrasena."';"."\n");
-          	fwrite($file, "$"."SERVIDOR="."'".$localhost."';"."\n");
-          	fwrite($file, "$"."BSD="."'".$bsd."';"."\n");
+      			$file = fopen("./configuraciondb.php","a");
+			fwrite($file, "<?php"."\n");
+			fwrite($file, "if (isset("."$"."_ENV['OPENSHIFT_APP_NAME'])) {"."\n");
+			fwrite($file, ""."$"."db_user="."$"."_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];"."\n");
+			fwrite($file, ""."$"."db_host="."$"."_ENV['OPENSHIFT_MYSQL_DB_HOST'];
+   "."\n");
+			fwrite($file, "$"."db_name="."'".$bsd."';"."\n");
+			fwrite($file, ""."$"."db_password="."$"."_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];"."\n");
+			fwrite($file, "}"."\n");  
+          	fwrite($file, "else{"."\n");
+			fwrite($file, "$"."db_user="."'".$usuario."';"."\n");
+          	fwrite($file, "$"."db_password="."'".$contrasena."';"."\n");
+          	fwrite($file, "$"."db_host="."'".$localhost."';"."\n");
+          	fwrite($file, "$"."db_name="."'".$bsd."';"."\n");
+			fwrite($file, "}"."\n");  
           	fwrite($file, "?>"."\n");
           	fclose($file);
+			unlink('./formulario_instaladora.php');
+			unlink('./enteraa.php');
+			unlink('./mitada.php');
+			header('Location:Proyecto1.php');
 		}
 }
 ?>

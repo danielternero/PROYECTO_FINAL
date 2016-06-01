@@ -220,7 +220,11 @@ margin-top: -275px;
 .formulario{
 float: left;
 width: 47%;
-margin-top: -16px;
+}
+.formularioinsta{
+float: left;
+width: 47%;
+margin-top:-16px;
 }
 .subrayado {
 border-bottom: 3px solid red;

@@ -32,7 +32,7 @@ if (!isset($_SESSION["user"])) {
 		if($z>=35&&$z<=42){
 		$c=$c+1;
 		}
-		if($z>=43&&$z<=50){
+		if($z>=43&&$z<=80){
 		$d=$d+1;
 		}
 		}
@@ -46,7 +46,7 @@ $graph->yaxis->SetTickPositions(array(0,1,2,3,4,5));
 $graph->SetBox(false);
 
 $graph->ygrid->SetFill(false);
-$graph->xaxis->SetTickLabels(array('17-25','26-34','35-42','43-50'));
+$graph->xaxis->SetTickLabels(array('17-25','26-34','35-42','43-60'));
 $graph->yaxis->HideLine(false);
 $graph->yaxis->HideTicks(false,false);
 

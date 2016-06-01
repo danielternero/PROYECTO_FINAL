@@ -1,5 +1,8 @@
 <?php
 include_once("./configuraciondb.php");
+if (!isset($db_name)){
+header('Location:formulario_instalador.php');
+}
 //LA BORRO LA ANTERIOR PARA PODER UTILIZARLA LUEGO LIMPIA.
 if (isset($_SESSION['id'])){
 unset($_SESSION['id']);						  

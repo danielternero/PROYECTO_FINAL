@@ -1,5 +1,8 @@
 <?php
 include_once("./configuraciondb.php");
+if (!isset($db_name)){
+header('Location:formulario_instalador.php');
+}
   session_start();
 
 if (!isset($_SESSION["user"])) {
@@ -63,11 +66,11 @@ if ($_SESSION["nivel"]==1) {
         </tr>
 <?php
         if (isset($usuario)){
-		for($y=0;$y<sizeof($usuario);$y++){
+		for($w=0;$w<sizeof($usuario);$w++){
         echo "<tr>";
-        echo "<td>".$usuario[$y]."</td>";
-        echo "<td><a href='editarusuario.php?id=$dni[$y]'><img class='logoadmin'src='../img/editarusuario.ico'</a></td>";
-		echo "<td><a href='borrar.php?id=$dni[$y]'><img class='logoadmin' src='../img/eliminar.jpg'></a></td>";
+        echo "<td>".$usuario[$w]."</td>";
+        echo "<td><a href='editarusuario.php?id=$dni[$w]'><img class='logoadmin'src='../img/editarusuario.ico'</a></td>";
+		echo "<td><a href='borrar.php?id=$dni[$w]'><img class='logoadmin' src='../img/eliminar.jpg'></a></td>";
 		echo "</tr>";
         }
 						   }

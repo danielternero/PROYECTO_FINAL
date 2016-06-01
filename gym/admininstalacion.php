@@ -1,5 +1,8 @@
 <?php
 include_once("./configuraciondb.php");
+if (!isset($db_name)){
+header('Location:formulario_instalador.php');
+}
   session_start();
 
 if (!isset($_SESSION["user"])) {
@@ -79,5 +82,14 @@ if ($_SESSION["nivel"]==1) {
     </div>
  
 </div>
+  <div id="pie">
+	  	 <table>  
+			<tr>
+		<?php	
+			 echo "<td>CREAR INSTALACION<a href='crearinstalacion.php'><img class='logoadmin'src='../img/anadirejercicio.png'</a></td>";
+		?>
+		</tr>
+		</table> 
+</div>	
 </body>
 </html>
