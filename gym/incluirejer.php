@@ -60,7 +60,7 @@ header('Location: adminplan.php');
   <div id="cabecera">
     	<div class="cuadro1">
       		<img  class="logo" src="Captura.png"/>
-         	<h1 class="welcome">ASIGNAR PLAN</h1>
+         	<h1 class="welcome">ASIGNAR EJERCICIOS</h1>
 		</div>
 	  	<div class="cuadro2">
 		   	<a href="adminplan.php"><img  class="botonsalir" src="salir.png"/></a>

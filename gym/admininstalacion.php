@@ -60,7 +60,7 @@ if ($_SESSION["nivel"]==1) {
 	  <div class="espacio">
         <table>  
         <tr>
-            <th>EJERCICIOS</th>
+            <th>INSTALACION</th>
             <th>EDITAR</th>
 			<th>BORRAR</th>
 			
