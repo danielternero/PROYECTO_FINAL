@@ -74,7 +74,14 @@ margin-left: 2.5%;
 background-color:#FBFCA4;
 }
 
-
+#cuerpo3 {
+clear: both;
+width: 95%;
+height: 455px;
+float: left;
+margin-left: 2.5%;
+background-color:#2E2E2E;
+}
 /*------------------FOTO USUARIO---------------------------*/
 #contenidofoto {
 float: left;
@@ -119,7 +126,21 @@ margin-top:35px;
 margin-left: 25px;
 
 }
+#contenidodatos3{
+float: left;
+width: 37%;
+height: 440px;
+background-color: #585858;
+margin-top: 8px;
+border-radius: 35px;
+color:white;
+}
 
+#contenidodatos3 p{
+margin-top:35px;
+margin-left: 25px;
+
+}
 #contenidoplan{
 float: left;
 width: 97%;
@@ -153,10 +174,28 @@ margin-top: 35px;
 margin-left: 25px;
 
 }
+
+#contenidoplan4{
+float: left;
+width: 97%;
+height: 3px;
+background-color: red;
+margin-top: 26px;
+border-radius: 35px;
+margin-left: 9px;
+font-size: 21px;
+}
+
+#contenidoplan4 p{
+margin-top: 35px;
+margin-left: 25px;
+
+}
 .subrayado {
 border-bottom: 3px solid red;
 font-size: 16px;
 font-weight: bold;
+color: black;
 }
 /*-----------------------------------pie------------------------*/
 #pie {
@@ -225,7 +264,15 @@ width: 47%;
 float: left;
 width: 47%;
 margin-top:-16px;
+color: black;
 }
+
+.formulario3{
+float: left;
+width: 47%;
+color: white;
+}
+
 .subrayado {
 border-bottom: 3px solid red;
 }
@@ -272,6 +319,19 @@ font-weight: bold;
 background-color: #FDFEBA;
 border-radius: 50px;
 }
+.arriba3{
+padding-left: 40px;
+margin-top:40px;
+margin-left: 40px;
+height: 170px;
+width: 12%;
+float: left;
+clear: both;
+font-weight: bold;
+background-color: #585858;
+border-radius: 50px;
+color:white;
+}
 .debajo{
 padding-left: 40px;
 margin-top:40px;
@@ -295,6 +355,18 @@ border-radius: 50px;
 background-color: #FDFEBA;
 }
 
+.debajo3{
+padding-left: 40px;
+margin-top:40px;
+margin-left: 40px;
+height: 170px;
+width: 12%;
+float: left;
+font-weight: bold;
+border-radius: 50px;
+background-color: #585858;
+color: white;
+}
 .grafica{
 width: 61%;
 height: 450px;
@@ -342,6 +414,19 @@ border-radius: 35px;
 margin-left: 40px;
 padding: 20px;
 font-weight: bold;
+}
+
+#contenidoplan4b{
+float: left;
+width: 35%;
+height: 220px;
+background-color: #585858;
+margin-top: 50px;
+border-radius: 35px;
+margin-left: 40px;
+padding: 20px;
+font-weight: bold;
+color:white;
 }
 
 /*------------aplicacion------------------*/

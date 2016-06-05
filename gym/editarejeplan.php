@@ -77,7 +77,7 @@ header('Location: adminplan.php');
   </div>
   <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" action="editarejeplan.php">
-    <fieldset class="formulario">
+    <fieldset class="<?php echo $_SESSION['tema'][11]; ?>">
         <legend><span class="subrayado">EJERCICIO </span></legend></br>
     
    

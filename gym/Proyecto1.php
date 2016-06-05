@@ -106,6 +106,16 @@ $connection3 = new mysqli($db_host, $db_user, $db_password, $db_name);
         $(".instalaciones").fadeToggle(500);
         $(".planes").hide();
   });
+	
+	$("#planboton").click(function(){
+          $(".planes3").fadeToggle(500);
+          $(".instalaciones3").hide();
+    });
+    $(".instalaciones3").hide();
+  $("#planboton2").click(function(){
+        $(".instalaciones3").fadeToggle(500);
+        $(".planes3").hide();
+  });
 
   $("#botoninicio").click( function() {
       $("#dialog").dialog({
@@ -188,9 +198,10 @@ $connection3 = new mysqli($db_host, $db_user, $db_password, $db_name);
  					
             <li class="lista1" id="planboton">PLAN</li>
             <li class="lista1" id="planboton2">HORARIOS</li>
-					<li class="lista">TEMAS</li></br>
-					<li class="lista"><a href="tema.php?tema=clasico">Clasico</a></li>
- 					<li class="lista"><a href="tema.php?tema=privameral">Privameral</a></li>
+<li class="lista">TEMAS</li></br>
+<li class="lista"><a href="tema.php?tema=clasico">Clasico</a></li>
+<li class="lista"><a href="tema.php?tema=privameral">Privameral</a></li>
+<li class="lista"><a href="tema.php?tema=sombrio">Sombrio</a></li>
             </ul>
         </div>
         <div class="cuadro2">

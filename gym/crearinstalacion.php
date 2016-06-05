@@ -67,7 +67,7 @@ if ($_SESSION["nivel"]==1) {
   </div>
   <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" enctype="multipart/form-data">
-    <fieldset class="formulario">
+    <fieldset class="<?php echo $_SESSION['tema'][11]; ?>">
         <legend><span class="subrayado">INSTALACION</span></legend></br>
     Sala:                     
   <input type="text" name="SALA" required /></br></br>

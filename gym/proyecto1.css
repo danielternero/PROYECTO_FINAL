@@ -38,7 +38,6 @@ margin-top: -10px;
 }
 
 .logo{
-
 margin-left: 20px;
 float: left;
 }
@@ -56,6 +55,7 @@ margin-top: 35px;
 .lista{
 list-style: none;
 margin-left: 130px;
+margin-top: -2px;
 float: left;
 }
 
@@ -81,6 +81,15 @@ font-size: 15px;
 background-color: #FBFCA4;
 }
 
+.planes3{
+clear: both;
+float: left;
+width: 100%;
+height: 150px;
+font-size: 15px;
+background-color:#585858;
+}
+
 .planes ul li {
   float: left;
   list-style: none;
@@ -100,6 +109,16 @@ background-color: #FBFCA4;
   width: 225px;
 }
 
+.planes3 ul li {
+  float: left;
+  list-style: none;
+  display: inline;
+  padding-top: 3px;
+  margin-left: 60px;
+  height: 200px;
+  width: 225px;
+color: white;
+}
 
 .planes ul li p {
 margin: 0px;
@@ -115,9 +134,18 @@ padding-top:3px;
 width: 100%;
 
 }
+
+.planes3 ul li p {
+margin: 0px;
+text-align: center;
+padding-top:3px;
+width: 100%;
+}
+
 .subrayado {
 border-bottom: 3px solid red;
 font-size: 16px;
+color: black;
 }
 .instalaciones{
    clear: both;
@@ -132,6 +160,14 @@ font-size: 16px;
    width: 100%;
    height: 150px;
      background-color:#FBFCA4;
+ }
+
+.instalaciones3{
+   clear: both;
+   float: left;
+   width: 100%;
+   height: 150px;
+     background-color:#585858;
  }
 
 .instalaciones ul li {
@@ -153,6 +189,17 @@ font-size: 16px;
    height: 200px;
    width: 225px;
 }
+.instalaciones3 ul li {
+   float: left;
+   list-style: none;
+   display: inline;
+   padding-top: 3px;
+   margin-left: 15px;
+   height: 200px;
+   width: 225px;
+color: white;
+ }
+
  #planboton2{
  cursor: pointer;
  }
@@ -183,10 +230,18 @@ margin-left: 2.5%;
 margin-top: 8px;
 float: left;
 background-color: #FBFCA4;
-
-
-
 }
+
+#carrusel3 {
+clear: both;
+width: 95%;
+height: 520px;
+margin-left: 2.5%;
+margin-top: 8px;
+float: left;
+background-color: #2E2E2E;
+}
+
 /* -------------------------------------CARRUSEL-------------------------------- */
 /* jssor slider bullet navigator skin 01 css */
         /*
@@ -257,6 +312,17 @@ float: left;
     bottom: 0;
     width: 100%;
     background-color: #FDFEBA;
+    position: absolute;
+    bottom: 0;
+    width: 94%;
+
+}
+#carrusel_automatico3 {
+float: left;
+    height: 350px;
+    bottom: 0;
+    width: 100%;
+    background-color: #2E2E2E;
     position: absolute;
     bottom: 0;
     width: 94%;

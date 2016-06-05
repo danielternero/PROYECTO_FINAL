@@ -57,7 +57,7 @@ $connection->query( "UPDATE usuario set FECHA_ALTA=current_date() where DNI='$dn
   </div>
   <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" enctype="multipart/form-data">
-    <fieldset class="formulario">
+    <fieldset class="<?php echo $_SESSION['tema'][11]; ?>">
         <legend><span class="subrayado">DATOS PERSONALES </span></legend></br>
     Dni:
     <input type="text" name="DNI" maxlength="9" required/></br></br>
@@ -75,7 +75,7 @@ $connection->query( "UPDATE usuario set FECHA_ALTA=current_date() where DNI='$dn
     Correo electronico:
     <input type="email" name="CORREO_ELECTRONICO" required /></br></br>
     </fieldset>
-    <fieldset class="formulario">
+    <fieldset class="<?php echo $_SESSION['tema'][11]; ?>">
     <legend ><span class="subrayado">DATOS DE USUARIO </span></legend></br>
     Nombre de usuario:
     <input type="text" name="USUARIO" required/></br></br>

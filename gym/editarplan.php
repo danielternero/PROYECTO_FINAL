@@ -66,7 +66,7 @@ header('Location: adminplan.php');
   </div>
   <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" enctype="multipart/form-data">
-    <fieldset class="formulario">
+    <fieldset class="<?php echo $_SESSION['tema'][11]; ?>">
         <legend><span class="subrayado">PLAN </span></legend></br>
     
    

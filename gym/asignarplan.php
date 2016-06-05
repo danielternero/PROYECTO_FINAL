@@ -79,7 +79,7 @@ header('Location: adminplan.php');
   <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post">
     
-    <fieldset class="formulario">
+    <fieldset class="<?php echo $_SESSION['tema'][11]; ?>">
     <legend ><span class="subrayado">ASIGNAR PLAN</span></legend></br>
     FECHA INICIO:
     <input type="date" name="FECHA_INICIO" required/></br></br>
@@ -92,7 +92,7 @@ header('Location: adminplan.php');
     TIPO:
     <input type="text" name="TIPO" required/></br></br>
     </fieldset>
-    <fieldset class="formulario" required></br>
+    <fieldset class="<?php echo $_SESSION['tema'][11]; ?>" required></br>
     EJERCICIO:<?php
     echo "<select name='EJERCICIO' required>";
 	

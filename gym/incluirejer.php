@@ -69,7 +69,7 @@ header('Location: adminplan.php');
   <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post">
     
-    <fieldset class="formulario">
+    <fieldset class="<?php echo $_SESSION['tema'][11]; ?>">
 		<legend><span class="subrayado">INCLUIR EJERCICIOS</span></legend>
     EJERCICIO:<?php
     echo "<select name='EJERCICIO'>";

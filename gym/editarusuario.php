@@ -68,7 +68,7 @@ header('Location: adminusuario.php');
   </div>
   <div id="<?php echo $_SESSION['tema'][4]; ?>">
 <form method="post" enctype="multipart/form-data">
-    <fieldset class="formulario">
+    <fieldset class="<?php echo $_SESSION['tema'][11]; ?>">
         <legend><span class="subrayado">EDITAR USUARIO </span></legend></br>
     
     Nombre:                     
@@ -86,7 +86,7 @@ header('Location: adminusuario.php');
     Correo electronico:
     <input type="email" name="CORREO_ELECTRONICO" required value="<?php echo $correo; ?>"/></br></br>
     </fieldset>
-    <fieldset class="formulario">
+    <fieldset class="<?php echo $_SESSION['tema'][11]; ?>">
     <legend ><span class="subrayado">DATOS DE USUARIO </span></legend></br>
     Nombre de usuario:
     <input type="text" name="USUARIO" required value="<?php echo $usuario; ?>"/></br></br>
