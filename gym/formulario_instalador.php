@@ -31,19 +31,19 @@ session_start();
   </div>
   <div class="apli "id="<?php echo $_SESSION['tema'][4]; ?>">
 	  <div id="aplicacion">
-		  
+
 <form method="post" enctype="multipart/form-data" action="formulario_instalador.php">
    <fieldset class="formularioinsta">
     <legend ><span class="subrayado"></span></legend></br>
     Usuario:
     <input type="text" name="USUARIO" required/></br></br>
-    
+
     Contraseña:
     <input type="password" name="CONTRASENA" required /></br></br>
-	
+
 	Servidor:
 	<input type="text" name="HOST" required/></br></br>
-    
+
 	Nombre de BSD:
     <input type="text" name="BSD" required/></br></br>
 	Base de datos:
@@ -54,7 +54,7 @@ session_start();
 
 <input type="submit" value="Enviar" />
     </fieldset>
-    
+
 </form>
 </div>
     </div>
@@ -74,9 +74,76 @@ if(isset($_POST["USUARIO"])){
             printf("Connection failed: %s\n", $connection->connect_error);
             exit();
 		}else{ if($tipobsd == 'entera'){
-                  include("entera.php");
+      
+      $filename = 'entera.sql';
+    
+      $mysql_host = $localhost;
+     
+      $mysql_username = $usuario;
+    
+      $mysql_password = $contrasena;
+      
+      $mysql_database = $bsd;
+
+      
+      $templine = '';
+      
+      $lines = file($filename);
+      
+      foreach ($lines as $line)
+      {
+     
+      if (substr($line, 0, 2) == '--' || $line == '')
+          continue;
+
+      
+      $templine .= $line;
+      
+      if (substr(trim($line), -1, 1) == ';')
+      {
+          
+          $connection->query($templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysql_error() . '<br /><br />');
+          
+          $templine = '';
+      }
+      }
+       echo "Tables imported successfully";
                 }else{
-                  include("mitad.php");
+                
+                  $filename = 'mitad.sql';
+                  
+                  $mysql_host = $localhost;
+                 
+                  $mysql_username = $usuario;
+                 
+                  $mysql_password = $contrasena;
+                 
+                  $mysql_database = $bsd;
+
+
+                  
+                  $templine = '';
+                  
+                  $lines = file($filename);
+                  
+                  foreach ($lines as $line)
+                  {
+          
+                  if (substr($line, 0, 2) == '--' || $line == '')
+                      continue;
+
+           
+                  $templine .= $line;
+                
+                  if (substr(trim($line), -1, 1) == ';')
+                  {
+                    
+                      $connection->query($templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysql_error() . '<br /><br />');
+                    
+                      $templine = '';
+                  }
+                  }
+                   
                 }
       			$file = fopen("./configuraciondb.php","a");
 			fwrite($file, "<?php"."\n");
@@ -86,13 +153,13 @@ if(isset($_POST["USUARIO"])){
    "."\n");
 			fwrite($file, "$"."db_name="."'".$bsd."';"."\n");
 			fwrite($file, ""."$"."db_password="."$"."_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];"."\n");
-			fwrite($file, "}"."\n");  
+			fwrite($file, "}"."\n");
           	fwrite($file, "else{"."\n");
 			fwrite($file, "$"."db_user="."'".$usuario."';"."\n");
           	fwrite($file, "$"."db_password="."'".$contrasena."';"."\n");
           	fwrite($file, "$"."db_host="."'".$localhost."';"."\n");
           	fwrite($file, "$"."db_name="."'".$bsd."';"."\n");
-			fwrite($file, "}"."\n");  
+			fwrite($file, "}"."\n");
           	fwrite($file, "?>"."\n");
           	fclose($file);
 			unlink('./formulario_instaladora.php');

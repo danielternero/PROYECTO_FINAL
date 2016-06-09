@@ -5,7 +5,7 @@ header('Location:formulario_instalador.php');
 }
   session_start();
 if(!isset($_SESSION["tema"])){
-    $_SESSION["tema"]=array("planes","instalaciones","carrusel","carrusel_automatico","cuerpo","contenidodatos","contenidoplan","contenidoplan2","arriba","debajo");
+    $_SESSION["tema"]=array("planes","instalaciones","carrusel","carrusel_automatico","cuerpo","contenidodatos","contenidoplan","contenidoplan2","arriba","debajo","centro","formulario");
   }
 ?>
 <?php
