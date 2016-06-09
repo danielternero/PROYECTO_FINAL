@@ -15,5 +15,5 @@ unset($_SESSION["tema"]);
 $_SESSION["tema"]=array("planes3","instalaciones3","carrusel3","carrusel_automatico3","cuerpo3","contenidodatos3","contenidoplan4","contenidoplan4b","arriba3","debajo3","centro2","formulario3");
 }
 
-header("location: proyecto1.php");
+header("location: Proyecto1.php");
 ?>

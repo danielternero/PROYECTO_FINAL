@@ -61,7 +61,6 @@ $graph->Add($gbplot);
 
 $b1plot->SetColor("white");
 $b1plot->SetFillColor("#cc1111");
-$graph->title->SetFont(FF_ARIAL,FS_BOLD,16);
 $graph->title->Set("EDAD MEDIA DE USUARIOS");
 $graph->xaxis->title->Set("EDAD DE USUARIOS");
 $graph->yaxis->title->Set("Nº USUARIOS");
